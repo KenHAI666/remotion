@@ -6,6 +6,7 @@ import { StartWins50 } from './StartWins50';
 import { PersistWins90 } from './PersistWins90';
 import { CompoundBarChart } from './CompoundBarChart';
 import { FocusVsMultitasking } from './FocusVsMultitasking'; 
+import { StaircaseScript, staircaseScriptDuration } from './StaircaseScript';
 import React from 'react';
 
 const IG_CONFIG = { fps: 30, width: 1080, height: 1920 } as const;
@@ -58,6 +59,13 @@ export const RemotionRoot: React.FC = () => (
       id="FocusVsMultitasking"
       component={FocusVsMultitasking}
       durationInFrames={300} 
+      {...IG_CONFIG}
+    />
+
+    <Composition
+      id="StaircaseScript"
+      component={StaircaseScript}
+      durationInFrames={staircaseScriptDuration}
       {...IG_CONFIG}
     /> 
   </>
