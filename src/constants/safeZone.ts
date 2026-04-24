@@ -1,0 +1,16 @@
+export const CANVAS = { WIDTH: 1080, HEIGHT: 1920 } as const;
+
+export const SAFE_ZONE = {
+  TOP: 220, BOTTOM: 420, LEFT: 60, RIGHT: 120,
+} as const;
+
+export const SAFE_CONTENT = {
+  x: SAFE_ZONE.LEFT,
+  y: SAFE_ZONE.TOP,
+  width: CANVAS.WIDTH - SAFE_ZONE.LEFT - SAFE_ZONE.RIGHT,
+  height: CANVAS.HEIGHT - SAFE_ZONE.TOP - SAFE_ZONE.BOTTOM,
+  centerX: CANVAS.WIDTH / 2,
+  centerY: SAFE_ZONE.TOP + (CANVAS.HEIGHT - SAFE_ZONE.TOP - SAFE_ZONE.BOTTOM) / 2,
+  right: CANVAS.WIDTH - SAFE_ZONE.RIGHT,
+  bottom: CANVAS.HEIGHT - SAFE_ZONE.BOTTOM,
+} as const;
